@@ -1,0 +1,69 @@
+@import '../../../styles/_mixins.scss';
+
+$grid_cols: 3, 4, 5;
+
+.grid {
+  display: grid;
+}
+
+.grid--xs-gap {
+  gap: 0.4rem;
+}
+
+.grid--sm-gap {
+  gap: 1rem;
+}
+
+.grid--md-gap {
+  gap: 1.4rem;
+}
+
+.grid--lg-gap {
+  gap: 2.4rem;
+}
+
+.grid--xl-gap {
+  gap: 3.2rem;
+}
+
+.grid:not(.grid--3-cols) {
+  @include respond(tab-land) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  @include respond(tab-port) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @include respond(phone) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include respond(small-phone) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.grid--5-cols {
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.grid--4-cols {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.grid--3-cols {
+  grid-template-columns: repeat(3, 1fr);
+
+  // @include respond(tab-land) {
+  //   // grid-template-columns: repeat(4, 1fr);
+  // }
+
+  // @include respond(tab-port) {
+  //   // grid-template-columns: repeat(3, 1fr);
+  // }
+
+  // @include respond(phone) {
+  //   // grid-template-columns: repeat(2, 1fr);
+  // }
+}

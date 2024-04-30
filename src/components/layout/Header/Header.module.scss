@@ -1,0 +1,25 @@
+@import '../../../styles/_mixins.scss';
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #555;
+  padding: 1rem 6.4rem;
+
+  @include respond(phone) {
+    padding: 1rem 2rem;
+  }
+
+  &__app-name {
+    color: #fff;
+    font-size: 2rem;
+    text-decoration: none;
+    margin: 0 auto;
+  }
+
+  &__favorites-link {
+    font-size: 1.2rem;
+    color: #ddd;
+  }
+}

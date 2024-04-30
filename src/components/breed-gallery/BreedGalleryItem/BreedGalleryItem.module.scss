@@ -1,0 +1,12 @@
+.breed-gallery-favorite-button {
+  position: absolute;
+  bottom: 2rem;
+  right: 1rem;
+  cursor: pointer;
+
+  svg {
+    --size: 4.8rem;
+    width: var(--size);
+    height: var(--size);
+  }
+}

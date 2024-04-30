@@ -1,0 +1,41 @@
+@import '../../../styles/_mixins.scss';
+
+.page-content {
+  max-width: 130rem;
+  margin: 0 auto;
+  padding: 4.8rem;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    // position: relative;
+    margin-bottom: 12rem;
+  }
+
+  &__heading {
+    font-size: 3.2rem;
+    text-align: center;
+    font-weight: 600;
+    margin: 0 auto;
+  }
+
+  &__back-btn {
+    // position: absolute;
+    // top: 50%;
+    // left: 0;
+    // transform: translateY(-50%);
+    background-color: #ddd;
+    border-radius: 5px;
+    padding: 1rem;
+    font-size: 2rem;
+    transition: all 0.2s;
+
+    &:hover {
+      background-color: #d5d5d5;
+    }
+  }
+
+  @include respond(phone) {
+    padding: 4.8rem 2.4rem;
+  }
+}

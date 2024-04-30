@@ -1,0 +1,35 @@
+.image-skeleton {
+  width: 100%;
+  height: 25rem;
+  background-color: #aaa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: loading infinite 1.7s;
+
+  svg {
+    transform: scale(2);
+  }
+}
+
+@keyframes loading {
+  0% {
+    opacity: 1;
+  }
+
+  25% {
+    opacity: 0.6;
+  }
+
+  50% {
+    opacity: 0.3;
+  }
+
+  70% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
