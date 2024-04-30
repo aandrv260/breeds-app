@@ -13,13 +13,10 @@ const useBreedsListings = () => {
 
   const resetBreedsFilters = useCallback(() => {
     setBreeds(prevState => {
-      const newBreeds = cloneDeep(prevState);
-
-      newBreeds.forEach(curBreed => {
-        curBreed.displayed = true;
-      });
-
-      return newBreeds;
+      return prevState.map(curBreed => ({
+        ...curBreed,
+        displayed: true,
+      }));
     });
   }, [setBreeds]);
 
